@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styleL.css" id="style">
+    <script src="script.js"></script>
+    <title>Game</title>
+</head>
+
+<body>
+    <div id="header">
+        <div><img src="images/regle.png" alt="Dessin du personnage de Sheldon" class="regle"></div>
+        <div><img src="images/logo.png" alt="logo de la série the big bang théory" class="logo"></div>
+        <div id="choix" onclick="mouv()"></div>
+    </div>
+    <div id="vie">
+         <div id="vieia">0</div>
+        <div id="result"><img src="images/logo_bazinga.png" alt="Logo Bazinga!!!!" class="logoB">
+        </div>
+        <div id="viejoueur">0</div>
+    </div>
+    <div id="contenu">
+        <div id="choixIA">
+            <!-- <img src="images/sheldon.png" name="choixIA" alt="Je suis pret ! Je vous attends pour jouer !"
+                height="250px"> -->
+            </div>
+        <div id="main">
+            <img src="images/choix0.png" onclick="game(0)" alt="PIERRE">
+            <img src="images/choix1.png" onclick="game(1)" alt="PAPIER">
+            <img src="images/choix2.png" onclick="game(2)" alt="CISEAUX">
+            <img src="images/choix3.png" onclick="game(3)" alt="LEZARD">
+            <img src="images/choix4.png" onclick="game(4)" alt="SPOCK">
+        </div>
+        <div id="monChoix">
+            <!-- <img src="images/leonard.png" name="choix" alt="Choisissez bien !" height="250px"> -->
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="t2"><img src="images/sheldon_telepathe.jpg" alt=""> </div>
+        <div id="t1">
+            <div id="resultatOrdi"></div>
+            <div id="resultatMoi"></div>
+        </div>
+        <div class="t2"> <img src="images/point.png" alt="Logo d'un atome" class="logoB"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
