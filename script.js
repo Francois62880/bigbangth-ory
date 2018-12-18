@@ -1,11 +1,35 @@
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
 nstyle = 0
 
 function mouv() {
     if (nstyle == 1) { 
         document.getElementById("style").href = "styleS.css";
+        setCookie("perso", "leonard", 365);
         nstyle = 0; }
     else { 
         document.getElementById("style").href = "styleL.css"; 
+        setCookie("perso", "sheldon", 365);
         nstyle = 1; }
 }
 
@@ -94,4 +118,12 @@ var vieia = 0;
 function rejouer() {
     location.reload();
 
+}
+
+if(getCookie("perso") == "leonard"){
+    nstyle = 1
+    mouv();
+}else if(getCookie("perso") == "sheldon"){
+    nstyle = 0
+    mouv()
 }
